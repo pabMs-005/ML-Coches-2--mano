@@ -26,8 +26,6 @@ y = df['AskPrice']
 modelo = LinearRegression()
 modelo.fit(X, y)
 
-# 4. Guardar el modelo entrenado en tu ordenador
-# La extensión .pkl (pickle) es el estándar para guardar modelos en Python
 joblib.dump(modelo, 'modelo_precio_coches.pkl')
 
 print("¡Modelo entrenado y guardado con éxito!")
