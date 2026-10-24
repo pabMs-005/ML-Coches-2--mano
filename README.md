@@ -45,16 +45,10 @@ Se abrirá automáticamente una pestaña en el navegador con la aplicación func
 
 ## Origen de los Datos
 
-El modelo ha sido entrenado utilizando un dataset público de transacciones reales de vehículos, aplicando una conversión de divisas (Rupia India a Euro) en la fase de preprocesamiento. Los datos crudos originales pueden consultarse en [Pega tu enlace a Kaggle aquí].
+El modelo ha sido entrenado utilizando un dataset público de transacciones reales de vehículos, aplicando una conversión de divisas (Rupia India a Euro) en la fase de preprocesamiento. Los datos crudos originales pueden consultarse en [(https://www.kaggle.com/datasets/mohitkumar282/used-car-dataset)].
+El archivo CSV original se ignora en este repositorio mediante .gitignore
 
 ---
 
 Respecto a tu pregunta sobre el enlace de Kaggle: el **README** es el sitio oficial y más importante de un repositorio para documentar de dónde salen los datos. Sin embargo, a nivel de código limpio, la mejor práctica es añadir ese enlace como comentario en la cabecera de tu archivo `used_car_price_modelBuilder.py`.
 
-Abre ese script y añade esto justo debajo de los `import`:
-
-```python
-# Fuente de los datos originales (Kaggle): https://www.kaggle.com/datasets/mohitkumar282/used-car-dataset
-# El archivo CSV original se ignora en este repositorio mediante .gitignore
-
-```
