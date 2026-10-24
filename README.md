@@ -1,6 +1,6 @@
 # Tasador Predictivo de Vehículos de Segunda Mano
 
-Esta aplicación es un sistema predictivo end-to-end diseñado para estimar el valor de mercado de coches de segunda mano. Utiliza un modelo de Machine Learning basado en regresión lineal que procesa el año de fabricación y el kilometraje del vehículo para calcular una tasación en euros en tiempo real.
+Esta aplicación es un sistema predictivo end-to-end diseñado para estimar el valor de mercado de coches de segunda mano de la India (Origen del dataset). Utiliza un modelo de Machine Learning basado en regresión lineal que procesa el año de fabricación y el kilometraje del vehículo para calcular una tasación en euros en tiempo real.
 
 ## Arquitectura del Sistema
 
