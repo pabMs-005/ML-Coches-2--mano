@@ -5,3 +5,4 @@ used_car_dataset.csv
 #Carpetas no subibles
 __pycache__/
 codigo_comentado/
+.git/
