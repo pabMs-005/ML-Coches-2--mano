@@ -21,6 +21,16 @@ pip install -r requirements.txt
 
 ## Despliegue en Local
 
+**0. Generar el Modelo (Paso Previo Obligatorio):**
+Para poder iniciar la aplicación, primero debes entrenar el algoritmo y guardar el archivo del modelo entrenado en tu ordenador. Asegúrate de tener el dataset original en la carpeta raíz y ejecuta el siguiente comando en tu terminal:
+
+```bash
+python used_car_price_modelBuilder.py
+
+```
+
+Este script procesará los datos, entrenará la regresión lineal y generará el archivo binario `modelo_precio_coches.pkl`, el cual es imprescindible para que el servidor de la API pueda arrancar.
+
 Para ejecutar el proyecto, es necesario iniciar el servidor de la API y la interfaz web en terminales independientes.
 
 **1. Iniciar la API (Backend):**
@@ -49,6 +59,3 @@ El modelo ha sido entrenado utilizando un dataset público de transacciones real
 El archivo CSV original se ignora en este repositorio mediante .gitignore
 
 ---
-
-Respecto a tu pregunta sobre el enlace de Kaggle: el **README** es el sitio oficial y más importante de un repositorio para documentar de dónde salen los datos. Sin embargo, a nivel de código limpio, la mejor práctica es añadir ese enlace como comentario en la cabecera de tu archivo `used_car_price_modelBuilder.py`.
-
