@@ -1,0 +1,6 @@
+#Archivos no subibles
+modelo_precio_coches.pkl 
+used_car_data.csv
+
+#Carpetas no subibles
+__pycache__/
