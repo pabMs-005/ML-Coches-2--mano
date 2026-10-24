@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 
 st.title("Tasador Predictivo de Coches")
+st.subheader("Entrenado con un conjunto de datos del mercado de coches de segunda mano exclusivamente de la India")
 
 # Controles visuales para el usuario
 year = st.number_input("Año de fabricación", min_value=1990, max_value=2024, value=2015)
