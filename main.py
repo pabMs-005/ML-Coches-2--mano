@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 
 app = FastAPI()
-modelo = joblib.load('modelo_precio_coches.pkl')
+modelo = joblib.load('modelo_precio_coches.pkl') #Debe ser generado con este nombre IMPORTANTE
 
 class CocheInput(BaseModel):
     Year: int
