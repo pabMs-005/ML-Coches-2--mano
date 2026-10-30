@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-import joblib
-import pandas as pd
+import keras
+import numpy as np
 
 app = FastAPI()
-modelo = joblib.load('modelo_precio_coches.pkl') #Debe ser generado con este nombre IMPORTANTE
+modelo = keras.models.load_model('modelCar_price.keras') #Debe ser generado con este nombre IMPORTANTE
 
 class CocheInput(BaseModel):
     Year: int
@@ -13,8 +13,13 @@ class CocheInput(BaseModel):
 
 @app.post("/predecir")
 def predecir_precio(datos: CocheInput):
-    df_entrada = pd.DataFrame([{"Year": datos.Year, "kmDriven": datos.kmDriven, "Owner": datos.Owner}])
+    datos_entrada = {
+        'Year': np.array([[datos.Year]]),
+        'kmDriven': np.array([[datos.kmDriven]]),
+        'Owner': np.array([[datos.Owner]])
+    }   
+
+    prediccion_raw = modelo.predict(datos_entrada)
     
-    prediccion = modelo.predict(df_entrada)
-    
-    return {"precio_estimado_euros": prediccion[0]}
+    precio_estimado = float(prediccion_raw[0][0])
+    return {"precio_estimado_euros": precio_estimado}

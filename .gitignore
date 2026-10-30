@@ -1,7 +1,6 @@
 #Archivos no subibles
 modelo_precio_coches.pkl 
 used_car_dataset.csv
-used_car_price_modelBuilder.py
 
 #Carpetas no subibles
 __pycache__/

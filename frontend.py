@@ -10,6 +10,10 @@ km = st.number_input("Kilómetros recorridos", min_value=0.0, max_value=500000.0
 num_owners = st.selectbox("Numero de dueños anteriores", ["Único dueño", "Dos dueños"], 
                           help="Aqui puedes elegir cuantos dueños anteriores a ti ha tenido el coche")
 
+if num_owners == "Único dueño": 
+    num_owners = 1
+else: num_owners = 2
+
 if st.button("Calcular Precio"):
     
     datos = {"Year": int(year), "kmDriven": float(km), "Owner": int(num_owners)}
