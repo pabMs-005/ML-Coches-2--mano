@@ -9,10 +9,11 @@ modelo = joblib.load('modelo_precio_coches.pkl') #Debe ser generado con este nom
 class CocheInput(BaseModel):
     Year: int
     kmDriven: float
+    Owner: int
 
 @app.post("/predecir")
 def predecir_precio(datos: CocheInput):
-    df_entrada = pd.DataFrame([{"Year": datos.Year, "kmDriven": datos.kmDriven}])
+    df_entrada = pd.DataFrame([{"Year": datos.Year, "kmDriven": datos.kmDriven, "Owner": datos.Owner}])
     
     prediccion = modelo.predict(df_entrada)
     

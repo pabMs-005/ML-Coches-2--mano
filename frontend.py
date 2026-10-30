@@ -7,10 +7,12 @@ st.subheader("Entrenado con un conjunto de datos del mercado de coches de segund
 #year = st.number_input("Año de fabricación", min_value=1990, max_value=2024, value=2015)
 year = st.slider(label="Año de fabricación", min_value=1990, max_value=2024, value=2015, help="Desliza la barra para seleccionar un año")
 km = st.number_input("Kilómetros recorridos", min_value=0.0, max_value=500000.0, value=50000.0)
+num_owners = st.selectbox("Numero de dueños anteriores", ["Único dueño", "Dos dueños"], 
+                          help="Aqui puedes elegir cuantos dueños anteriores a ti ha tenido el coche")
 
 if st.button("Calcular Precio"):
     
-    datos = {"Year": int(year), "kmDriven": float(km)}
+    datos = {"Year": int(year), "kmDriven": float(km), "Owner": int(num_owners)}
     
     respuesta = requests.post("http://localhost:8000/predecir", json=datos)
     
