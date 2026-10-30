@@ -4,7 +4,7 @@ import keras
 import numpy as np
 
 app = FastAPI()
-modelo = keras.models.load_model('modelCar_price.keras') #Debe ser generado con este nombre IMPORTANTE
+modelo = keras.models.load_model('modelCar_price_v1.keras') #Debe ser generado con este nombre IMPORTANTE
 
 class CocheInput(BaseModel):
     Year: int
